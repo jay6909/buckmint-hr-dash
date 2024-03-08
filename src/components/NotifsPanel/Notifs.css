@@ -1,0 +1,11 @@
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+.drop-shadow{
+    filter: drop-shadow(black 0px 6px 8px);
+}
+
+.notification-right-container{
+    min-width: 400px;
+}
