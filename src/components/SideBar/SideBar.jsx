@@ -1,5 +1,11 @@
 import React from "react";
 import DashIcon from "../../assets/HR Dashboard/ic_dashboard.svg?component";
+import RecruitmentIcon from "../../assets/HR Dashboard/ic_recruitment.svg?component";
+import EmployeeIcon from "../../assets/HR Dashboard/ic_employee.svg?component";
+import CalendarIcon from "../../assets/HR Dashboard/ic_calendar.svg?component";
+import DepartmentIcon from "../../assets/HR Dashboard/ic_department.svg?component";
+import SupportIcon from "../../assets/HR Dashboard/ic_support.svg?component";
+import SettingsIcon from "../../assets/HR Dashboard/ic_settings.svg?component";
 
 function SideBar() {
   return (
@@ -31,36 +37,41 @@ function SideBar() {
                <div><DashIcon/></div> <div style={{fontWeight:'16px', color:'var(--css-primary)'}}>Dashboard</div> <span class="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="d-flex flex-row gap-3 nav-link" href="#">
-               <div><DashIcon/></div> <div style={{fontWeight:'16px', color:'var(--css-primary)'}}>Recruitment</div> <span class="sr-only">(current)</span>
+               <div><RecruitmentIcon/></div> <div style={{fontWeight:'16px', color:'rgba(104, 104, 104, 1)'}}>Recruitment</div> <span class="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item ">
               <a class="d-flex flex-row gap-3 nav-link" href="#">
-               <div><DashIcon/></div> <div style={{fontWeight:'16px', color:'var(--css-primary)'}}>Schedule</div> <span class="sr-only">(current)</span>
+               <div><CalendarIcon/></div> <div style={{fontWeight:'16px', color:'rgba(104, 104, 104, 1)'}}>Schedule</div> <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="d-flex flex-row gap-3 nav-link" href="#">
+               <div><EmployeeIcon/></div> <div style={{fontWeight:'16px', color:'rgba(104, 104, 104, 1)'}}>Employee</div> <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="d-flex flex-row gap-3 nav-link" href="#">
+               <div><DepartmentIcon/></div> <div style={{fontWeight:'16px', color:'rgba(104, 104, 104, 1)'}}>Department</div> <span class="sr-only">(current)</span>
               </a>
             </li>
            
            
           </ul>
           <ul class="d-flex flex-column navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="d-flex flex-row gap-3 nav-link" href="#">
-               <div><DashIcon/></div> <div style={{fontWeight:'16px', color:'var(--css-primary)'}}>Dashboard</div> <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item active">
-              <a class="d-flex flex-row gap-3 nav-link" href="#">
-               <div><DashIcon/></div> <div style={{fontWeight:'16px', color:'var(--css-primary)'}}>Recruitment</div> <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item active">
-              <a class="d-flex flex-row gap-3 nav-link" href="#">
-               <div><DashIcon/></div> <div style={{fontWeight:'16px', color:'var(--css-primary)'}}>Schedule</div> <span class="sr-only">(current)</span>
-              </a>
-            </li>
            
+            <li class="nav-item ">
+              <a class="d-flex flex-row gap-3 nav-link" href="#">
+               <div><SupportIcon/></div> <div style={{fontWeight:'16px', color:'rgba(104, 104, 104, 1)'}}>Support</div> <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="d-flex flex-row gap-3 nav-link" href="#">
+               <div><SettingsIcon/></div> <div style={{fontWeight:'16px', color:'rgba(104, 104, 104, 1)'}}>Settings</div> <span class="sr-only">(current)</span>
+              </a>
+            </li>
            
           </ul>
           </div>
