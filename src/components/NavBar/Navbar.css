@@ -1,0 +1,21 @@
+/*mobile*/
+@media only screen and (min-width:768px){
+ 
+   
+  
+}
+
+/* desktop */
+@media only screen and (min-width: 1200px) {
+    .searchbar-container{
+        width: 1200px !important; 
+     }
+}
+
+/* tablet */
+
+/* @media only screen and (min-width: 768px) {
+    .searchbar-container{
+        width: 750px !important; 
+     }
+} */

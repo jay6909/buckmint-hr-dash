@@ -42,7 +42,7 @@ function index({notifications}) {
             aria-haspopup="true"
             aria-expanded="false"
           >
-            Admirra John
+            <div className="d-none d-md-block">Admirra John</div>
             <i style={{overflow:'hidden', marginTop:'10px'}} ><ArrowDropDownIcon width={20} height={20}/></i>
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">

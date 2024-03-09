@@ -9,7 +9,7 @@ function DashBoard() {
     <div style={{}} >
         
         <div className='d-flex flex-column flex-lg-row justify-content-center align-items-center'>
-        <div className="text-sm-start" style={{padding:'15px'}}>
+        <div className="text-sm-start" style={{padding:'15px', marginTop:'80px'}}>
             <h2>Dashboard</h2>
             <EmployeeStats/>
             <Accouncements/>

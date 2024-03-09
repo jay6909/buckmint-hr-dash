@@ -4,7 +4,20 @@
     border-radius: 12px;
     cursor:pointer;
 }
-
+.chart-image-container{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.rubik-growth-percentage{
+        font-family: "Rubik", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+      
+}
 /*mobile*/
 @media only screen and (min-width:768px){
     .employee-stat-card{
