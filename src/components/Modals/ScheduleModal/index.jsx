@@ -53,11 +53,12 @@ const [teamMembers, setTeamMembers] = useState([])
     return (
       <div
         className="d-flex justify-content-center align-items-center"
-        style={{ position: "absolute", width: "100%", height: "100%" }}
+        style={{ position: "absolute", width: "100%", height: "100%",     background: "#00000045",
+        backdropFilter: "blur(1px)" }}
       >
         <div
           className="d-flex justify-content-center align-items-center bg-white border-1 border-black"
-          style={{ width: "40%", height: "75%" }}
+          style={{ width: "40%", height: "75%", borderRadius:'8px', padding:'10px' }}
         >
           <div className="d-flex flex-column h-100 w-100">
             <div style={{ cursor: "pointer" }} onClick={handleModalClose}>
@@ -158,9 +159,9 @@ const [teamMembers, setTeamMembers] = useState([])
                   {dateOpen ?  <div className="d-flex flex-column justify-content-around align-items-start gap-4 w-100">
                   <div className="text-start w-100">
                     <div className="poppins-semibold" style={{fontSize:'18px'}}>
-                    Select a time for meeting
+                    Select a date for meeting
                     </div>
-                    <div className="roboto-regular" style={{color:'#475467'}}>The following time will be set for the meeting:</div>
+                    <div className="roboto-regular" style={{color:'#475467'}}>The following date will be set for the meeting:</div>
                   </div>
                   <ResponsiveDatePickers handleDateChange={handleDateChange}/>
                   <div>
@@ -169,9 +170,9 @@ const [teamMembers, setTeamMembers] = useState([])
                   {teamMemberOpen ?  <div className="d-flex flex-column justify-content-around align-items-start gap-4 w-100">
                   <div className="text-start w-100">
                     <div className="poppins-semibold" style={{fontSize:'18px'}}>
-                    Select a time for meeting
+                    Add team member
                     </div>
-                    <div className="roboto-regular" style={{color:'#475467'}}>The following time will be set for the meeting:</div>
+                    <div className="roboto-regular" style={{color:'#475467'}}>The following users have access to this meeting:</div>
                   </div>
                   <TeamMembers />
                   <div>
