@@ -21,7 +21,7 @@ function AnnouncementScheduleCard({
       </div>
       <div
         className="d-flex flex-row justify-content-between "
-        style={{ width: "65px", margin: "5px" }}
+        style={{ margin: "5px" }}
       >
         {ShowPinIcon ? (
           <div

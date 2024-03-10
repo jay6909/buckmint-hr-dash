@@ -7,9 +7,8 @@ import DepartmentIcon from "../../assets/HR Dashboard/ic_department.svg?componen
 import SupportIcon from "../../assets/HR Dashboard/ic_support.svg?component";
 import SettingsIcon from "../../assets/HR Dashboard/ic_settings.svg?component";
 import './SideBar.css'
-function SideBar() {
+function SideBarNav() {
   return (
-    <div style={{ width: "25%", height: 'auto' }}>
       <nav class="d-flex p-2 flex-column navbar navbar-expand-md navbar-light bg-light h-100">
       <div>
       <h1>
@@ -82,8 +81,7 @@ function SideBar() {
           </div>
         </div>
       </nav>
-    </div>
   );
 }
 
-export default SideBar;
+export default SideBarNav;
