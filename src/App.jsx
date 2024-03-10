@@ -6,12 +6,17 @@ import Modal from "./context/ModalContext";
 import ScheduleModal from "./components/Modals/ScheduleModal";
 import Data from "./context/MemberDataContext";
 import SideBarNav from "./components/SideBar/SideBar";
+import AddedData from "./context/AddedMemberContext";
+import DropDown from "./context/DropDownMemberContext";
 
 function App() {
   return (
     <Modal>
       <Data>
-        <div className="d-flex flex-row">
+        <AddedData> 
+        <DropDown >
+
+                 <div className="d-flex flex-row">
           <div className="w-auto" style={{ width: "20%", height: 'auto' }}>
           <SideBarNav  />
 
@@ -22,7 +27,10 @@ function App() {
           </div>
           <ScheduleModal />
         </div>
-        </Data>
+        </DropDown>
+        </AddedData>
+
+      </Data>
    </Modal>
   );
 }

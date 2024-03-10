@@ -8,7 +8,8 @@ import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
 import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 import { StaticDatePicker } from '@mui/x-date-pickers/StaticDatePicker';
 
-export default function ResponsiveDatePickers({handleDateChange}) {
+export default function ResponsiveDatePickers({ date, setDate}) {
+
   return (
     <LocalizationProvider  dateAdapter={AdapterDayjs}>
       <DemoContainer
@@ -26,7 +27,7 @@ export default function ResponsiveDatePickers({handleDateChange}) {
           <MobileDatePicker defaultValue={dayjs('2022-04-17')} />
         </DemoItem> */}
         {/* <DemoItem label="Responsive variant"> */}
-          <DatePicker  onChange={handleDateChange} defaultValue={dayjs('2022-04-17')} />
+          <DatePicker value={date} onChange={setDate} defaultValue={dayjs('2022-04-17')} />
         {/* </DemoItem> */}
         {/* <DemoItem label="Static variant"> */}
           {/* <StaticDatePicker defaultValue={dayjs('2022-04-17')} /> */}

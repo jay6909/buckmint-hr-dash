@@ -7,20 +7,20 @@ import { MenuItem as BaseMenuItem, menuItemClasses } from '@mui/base/MenuItem';
 import { styled } from '@mui/system';
 import { CssTransition } from '@mui/base/Transitions';
 import { PopupContext } from '@mui/base/Unstable_Popup';
+import { useDropDown } from '../../../context/DropDownMemberContext';
 
-export default function DropDownAddMember({addedMembers,handleAddMember,data}) {
-    const [DropDownAddMember, setDropDownAddMember] = React.useState(data);
+export default function DropDownAddMember({addedMemberData,handleAddMember,data}) {
+    const [dropDown, setDropDown] = React.useState(data);
+    const [addedDropDown, setAddedDropDown] = useDropDown();
 
 
   return (
     <Dropdown>
       <MenuButton>Select Team Member</MenuButton>
       <Menu slots={{ listbox: AnimatedListbox }}>
-        {DropDownAddMember.map((member, index)=>
+        {addedDropDown.map((member, index)=>
         <MenuItem key={index} onClick={()=>{
-            handleAddMember(member);
-            let tempMembers=DropDownAddMember.filter((ddMember)=>ddMember!==member);
-            setDropDownAddMember(tempMembers)
+            handleAddMember({member, setDropDown, dropDown});
         }}>{member.email}</MenuItem>
         )}
     </Menu>

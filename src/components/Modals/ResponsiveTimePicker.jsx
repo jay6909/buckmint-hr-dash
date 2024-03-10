@@ -8,7 +8,8 @@ import { MobileTimePicker } from '@mui/x-date-pickers/MobileTimePicker';
 import { DesktopTimePicker } from '@mui/x-date-pickers/DesktopTimePicker';
 import { StaticTimePicker } from '@mui/x-date-pickers/StaticTimePicker';
 
-export default function ResponsiveTimePickers({handleTimeChange}) {
+export default function ResponsiveTimePickers({time, setTime}) {
+
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <DemoContainer
@@ -26,7 +27,7 @@ export default function ResponsiveTimePickers({handleTimeChange}) {
           <MobileTimePicker defaultValue={dayjs('2022-04-17T15:30')} />
         </DemoItem> */}
         {/* <DemoItem label="Responsive variant"> */}
-          <TimePicker onChange={handleTimeChange} defaultValue={dayjs('2022-04-17T15:30')} />
+          <TimePicker onChange={setTime} defaultValue={dayjs('2022-04-17T15:30')} />
         {/* </DemoItem> */}
         {/* <DemoItem label="Static variant">
           <StaticTimePicker defaultValue={dayjs('2022-04-17T15:30')} />

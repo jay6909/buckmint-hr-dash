@@ -17,7 +17,6 @@ function TeamMemberCard({ data, handleRemoveMember }) {
       </div>
       <div>
         <button className="roboto-bold" style={{color:'#B42318', fontSize:'16px', background:'white', border:'none'}} onClick={()=>{
-            console.log(data.email);
             handleRemoveMember(data)
         }}>Remove</button>
       </div>
