@@ -6,12 +6,13 @@ import CalendarIcon from "../../assets/HR Dashboard/ic_calendar.svg?component";
 import DepartmentIcon from "../../assets/HR Dashboard/ic_department.svg?component";
 import SupportIcon from "../../assets/HR Dashboard/ic_support.svg?component";
 import SettingsIcon from "../../assets/HR Dashboard/ic_settings.svg?component";
-
+import './SideBar.css'
 function SideBar() {
   return (
-    <div style={{ width: "25%" }}>
-      <nav class="d-flex flex-column navbar navbar-expand-md navbar-light bg-light">
-        <h1>
+    <div style={{ width: "25%", height: 'auto' }}>
+      <nav class="d-flex p-2 flex-column navbar navbar-expand-md navbar-light bg-light h-100">
+      <div>
+      <h1>
           <a class="navbar-brand fs-1 fw-bold" href="#">
             WeHr
           </a>
@@ -29,9 +30,11 @@ function SideBar() {
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <div className="d-flex flex-column">
-          <ul class="d-flex flex-column navbar-nav mr-auto">
+      </div>
+        <div class="collapse navbar-collapse w-100 align-items-start" id="navbarSupportedContent">
+          <div className="d-flex flex-column justify-content-start w-100">
+            <div className="roboto-medium text-start p-2" style={{color:'#686868', fontSize:'14px'}}>MAIN MENU</div>
+          <ul class="d-flex flex-column  navbar-nav w-100">
             <li class="nav-item active">
               <a class="d-flex flex-row gap-3 nav-link" href="#">
                <div><DashIcon/></div> <div style={{fontWeight:'16px', color:'var(--css-primary)'}}>Dashboard</div> <span class="sr-only">(current)</span>
@@ -60,7 +63,9 @@ function SideBar() {
            
            
           </ul>
-          <ul class="d-flex flex-column navbar-nav mr-auto">
+          <div className="roboto-medium text-start p-2" style={{color:'#686868', fontSize:'14px'}}>OTHER</div>
+
+          <ul class="d-flex flex-column navbar-nav  w-100">
            
             <li class="nav-item ">
               <a class="d-flex flex-row gap-3 nav-link" href="#">

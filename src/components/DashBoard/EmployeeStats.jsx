@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import data from "../../data";
 import GrowthLineVec from "../../assets/HR Dashboard/growth-line-vec.svg?component";
 import UpArrow from "../../assets/HR Dashboard/uparrow.svg?component";
+import EmployeeStatsCard from "./EmployeeStatsCard";
 
 function EmployeeStats() {
   const [employeeStats, setEmployeeStats] = useState(data.employeeStats);
@@ -13,68 +14,10 @@ function EmployeeStats() {
       }}
     >
       <div className="employee-stats-container d-flex flex-column flex-md-row justify-content-md-between gap-sm-2">
-        <div
-          className="employee-stat-card d-flex justify-content-center align-center flex-column gap-1"
-          style={{
-            background: "rgba(255 81 81 /15%)",
-            padding: "12px",
-            borderRadius: "12px",
-            cursor: "pointer",
-          }}
-        >
-          <div className="fw-medium " style={{ fontSize: "18px" }}>
-            {" "}
-            Available Position
-          </div>
-          <div style={{ fontSize: "34px", fontWeight: "500" }}>
-            {employeeStats.positionsAvail.count}
-          </div>
-          <div style={{ color: "var(--css-primary)" }}>
-            {employeeStats.positionsAvail.urgentNeeded} Urgently needed
-          </div>
-        </div>
-        <div
-          className="employee-stat-card d-flex justify-content-center align-center flex-column gap-1"
-          style={{
-            background: "rgb(55 134 241 / 15%)",
-
-            padding: "12px",
-            borderRadius: "12px",
-            cursor: "pointer",
-          }}
-        >
-          <div className="fw-medium " style={{ fontSize: "18px" }}>
-            {" "}
-            Job Open
-          </div>
-          <div style={{ fontSize: "34px", fontWeight: "500" }}>
-            {employeeStats.jobOpen.count}
-          </div>
-          <div style={{ color: "var(--css-secondary)" }}>
-            {employeeStats.jobOpen.activeHiring} Active hiring
-          </div>
-        </div>
-        <div
-          className="employee-stat-card d-flex justify-content-center align-center flex-column gap-1"
-          style={{
-            background: "rgb(238 97 207 / 15%)",
-
-            padding: "12px",
-            borderRadius: "12px",
-            cursor: "pointer",
-          }}
-        >
-          <div className="fw-medium " style={{ fontSize: "18px" }}>
-            {" "}
-            New Employees
-          </div>
-          <div style={{ fontSize: "34px", fontWeight: "500" }}>
-            {employeeStats.newEmployees.count}
-          </div>
-          <div style={{ color: "var(--css-light-pink)" }}>
-            {employeeStats.newEmployees.department} Department
-          </div>
-        </div>
+       <EmployeeStatsCard textColor={'var(--css-primary)'} bgColor={'#FFEFE7'} data={{mainText:'Available Jobs', secondaryText:`${employeeStats.positionsAvail.urgentNeeded} Urgently Needed`, dataPrimary:employeeStats.positionsAvail.count}}/>
+       <EmployeeStatsCard textColor={'var(--css-seconday)'} bgColor={'#E8F0FB'} data={{mainText:'Job Open', secondaryText:`${employeeStats.jobOpen.count} Active Hiring`, dataPrimary:employeeStats.positionsAvail.count}}/>
+       <EmployeeStatsCard textColor={'var(--css-light-pink)'} bgColor={'#FFEFE7'} data={{mainText:'New Employees', secondaryText:`${employeeStats.newEmployees.count} Department`, dataPrimary:employeeStats.newEmployees.count}}/>
+        
       </div>
       <div className="d-flex flex-column flex-md-row gap-2 justify-content-between">
         <div className="employee-graph-card d-flex flex-row" style={{}}>
@@ -103,7 +46,7 @@ function EmployeeStats() {
               <UpArrow />
             </div>
             <div className="chart-line-container d-flex" >
-              <GrowthLineVec width={115} height={42} />
+              <GrowthLineVec className="growth-vector-line backdrop-primary" width={115} height={42} />
             </div>
            </div>
             <div className="roboto-regular" style={{ background: "#FFEFE7" }}>
@@ -137,7 +80,7 @@ function EmployeeStats() {
               <UpArrow />
             </div>
             <div className="chart-line-container d-flex" >
-              <GrowthLineVec width={115} height={42} />
+              <GrowthLineVec className="growth-vector-line backdrop-primary" width={115} height={42} />
             </div>
            </div>
             <div className="roboto-regular" style={{ background: "#FFEFE7" }}>

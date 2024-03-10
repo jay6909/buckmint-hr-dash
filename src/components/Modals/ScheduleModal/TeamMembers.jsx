@@ -1,8 +1,20 @@
 import React from 'react'
+import TeamMemberCard from '../TeamMemberCard'
 
-function TeamMembers() {
+function TeamMembers({teamMembers}) {
+  // console.log(teamMembers)
   return (
-    <div>TeamMembers</div>
+    <div>
+      {teamMembers.map((member, index)=>{
+        (
+          // console.log(member);
+          
+          <TeamMemberCard key={index} data={member}/>
+
+        )
+        
+      })}
+    </div>
   )
 }
 

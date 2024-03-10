@@ -6,6 +6,7 @@ import ResponsiveTimePickers from "../ResponsiveTimePicker";
 import ResponsiveDatePickers from "../ResponsiveDatePicker";
 import XCloseButton from "../../../assets/x-close.svg?component";
 import TeamMembers from "./TeamMembers";
+import data from "../../../data";
 import { MobileDatePicker } from "@mui/x-date-pickers";
 function ScheduleModal() {
 
@@ -57,8 +58,8 @@ const [teamMembers, setTeamMembers] = useState([])
         backdropFilter: "blur(1px)" }}
       >
         <div
-          className="d-flex justify-content-center align-items-center bg-white border-1 border-black"
-          style={{ width: "40%", height: "75%", borderRadius:'8px', padding:'10px' }}
+          className="d-flex justify-content-center align-items-center bg-white border-1 border-black p-2"
+          style={{ width: "40%", height: "75%", borderRadius:'8px', }}
         >
           <div className="d-flex flex-column h-100 w-100">
             <div style={{ cursor: "pointer" }} onClick={handleModalClose}>
@@ -70,12 +71,10 @@ const [teamMembers, setTeamMembers] = useState([])
                 style={{ width: "40%" }}
               >
                 <div
-                  className="d-flex align-items-center"
+                  className="d-flex align-items-center  w-100 p-3"
                   onClick={handleTimeOpen}
                   style={{
                     cursor: "pointer",
-                    width: "100%",
-                    padding: "10px",
                     height: "60px",
                     color: timeOpen
                       ? "var(--css-primary)"
@@ -85,12 +84,10 @@ const [teamMembers, setTeamMembers] = useState([])
                   <div>Time</div>
                 </div>
                 <div
-                  className="d-flex align-items-center"
+                  className="d-flex align-items-center  w-100 p-3"
                   onClick={handleDateOpen}
                   style={{
                     cursor: "pointer",
-                    width: "100%",
-                    padding: "10px",
                     height: "60px",
                     color: dateOpen
                       ? "var(--css-primary)"
@@ -100,12 +97,10 @@ const [teamMembers, setTeamMembers] = useState([])
                   <div>Date</div>
                 </div>
                 <div
-                  className="d-flex align-items-center"
+                  className="d-flex align-items-center w-100 p-3 "
                   onClick={handleTeamOpen}
                   style={{
                     cursor: "pointer",
-                    width: "100%",
-                    padding: "10px",
                     height: "60px",
                     color: teamMemberOpen
                       ? "var(--css-primary)"
@@ -163,7 +158,10 @@ const [teamMembers, setTeamMembers] = useState([])
                     </div>
                     <div className="roboto-regular" style={{color:'#475467'}}>The following date will be set for the meeting:</div>
                   </div>
-                  <ResponsiveDatePickers handleDateChange={handleDateChange}/>
+                  <div className="w-100">
+                  <ResponsiveDatePickers  handleDateChange={handleDateChange}/>
+
+                  </div>
                   <div>
                     <button className="poppins-medium" style={{border:'none',borderRadius:'5px', background:'var(--css-primary)', width:'150px', height:'40px'}} onClick={handleTeamOpen}>Next</button></div>  
                 </div>  : <></>}
@@ -174,7 +172,7 @@ const [teamMembers, setTeamMembers] = useState([])
                     </div>
                     <div className="roboto-regular" style={{color:'#475467'}}>The following users have access to this meeting:</div>
                   </div>
-                  <TeamMembers />
+                  <TeamMembers teamMembers={data.teamMembers} />
                   <div>
                     <button className="poppins-medium" style={{border:'none',borderRadius:'5px', background:'var(--css-primary)', width:'150px', height:'40px'}} onClick={handleSubmit}>Confirm</button></div>  
                 </div>  : <></>}

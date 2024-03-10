@@ -298,3 +298,13 @@ p, h1, h2, h3, h4, h5, h6 {
 #root, #__next {
   isolation: isolate;
 }
+
+.backdrop-primary{
+  filter: drop-shadow( var(--css-primary) 0rem 0.3rem 0.3rem);
+}
+.backdrop-secondary{
+  filter: drop-shadow( var(--css-secondary) 0rem 0.3rem 0.3rem);
+}
+.backdrop-light-pink{
+  filter: drop-shadow( var(--css-light-pink) 0rem 0.3rem 0.3rem);
+}

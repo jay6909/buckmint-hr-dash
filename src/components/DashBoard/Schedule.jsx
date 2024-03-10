@@ -10,9 +10,9 @@ function Schedule({Recent}) {
   }
  
   return (
-    <div className="d-flex flex-column flex-md-row flex-lg-column gap-3" style={{ padding:"25px", borderRadius:'15px'}}>
+    <div className="d-flex flex-column flex-md-row flex-lg-column gap-3 align-items-center" style={{ padding:"25px", borderRadius:'15px'}}>
    
-      <div style={{ height:'350px', width:'400px'}} className="d-flex flex-column">
+      <div style={{ height:'350px', width:'400px', justifyContent: 'center', alignItems: 'center',padding: '20px'}} className="d-flex flex-column">
         <div  className="d-flex align-items-center" style={{background:'#1B204A', borderRadius:'8px 8px 0px 0px', width:'100%', height:'20%'}}>
           <div className='poppins-medium p-2  mx-3 text-white ' ><div style={{fontSize:'18px', textAlign:'left'}}>
           Recent Activity</div></div>

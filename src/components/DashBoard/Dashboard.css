@@ -18,6 +18,9 @@
         font-style: normal;
       
 }
+.growth-vector-line{
+    filter: drop-shadow( var(--css-primary) 0rem 0.3rem 0.3rem);
+}
 /*mobile*/
 @media only screen and (min-width:768px){
     .employee-stat-card{

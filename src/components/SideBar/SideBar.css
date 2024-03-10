@@ -1,0 +1,11 @@
+li:hover{
+    background-color: white;
+    opacity: 1;
+    transition: all ease-in-out;
+}
+li{
+    background-color: none;
+    opacity: 1;
+    transition: all ease-in-out;
+
+}

@@ -13,7 +13,7 @@ function App() {
 
     <div className="d-flex flex-row">
       <SideBar />
-      <div>
+      <div className="p-4">
         <NavBar />
           <DashBoard />
          

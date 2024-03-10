@@ -1,4 +1,4 @@
-const data = {
+let data = {
   announcements: [
     {
       title: "Outing schedule for every deployment",
@@ -20,6 +20,12 @@ const data = {
     totalEmployees:{count:216,men:120,women:96,growth:'+2%'},
     talentRequest:{count:16,men:6,women:10, growth:'+5%'},
 
-  }
+  },
+  teamMembers:[
+    {name:'Candice Wu', email:'candice@untitledui.com', profilePic:'null'},
+    {name:'Demi Wilkinson', email:'demi@untitledui.com', profilePic:'null'},
+    {name:'Drew Cano', email:'drew@untitledui.com', profilePic:'null'},
+
+  ]
 };
 export default data
