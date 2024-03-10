@@ -16,7 +16,7 @@ function EmployeeStats() {
       <div className="employee-stats-container d-flex flex-column flex-md-row justify-content-md-between gap-sm-2">
        <EmployeeStatsCard textColor={'var(--css-primary)'} bgColor={'#FFEFE7'} data={{mainText:'Available Jobs', secondaryText:`${employeeStats.positionsAvail.urgentNeeded} Urgently Needed`, dataPrimary:employeeStats.positionsAvail.count}}/>
        <EmployeeStatsCard textColor={'var(--css-seconday)'} bgColor={'#E8F0FB'} data={{mainText:'Job Open', secondaryText:`${employeeStats.jobOpen.count} Active Hiring`, dataPrimary:employeeStats.positionsAvail.count}}/>
-       <EmployeeStatsCard textColor={'var(--css-light-pink)'} bgColor={'#FFEFE7'} data={{mainText:'New Employees', secondaryText:`${employeeStats.newEmployees.count} Department`, dataPrimary:employeeStats.newEmployees.count}}/>
+       <EmployeeStatsCard textColor={'var(--css-light-pink)'} bgColor={'#FDEBF9'} data={{mainText:'New Employees', secondaryText:`${employeeStats.newEmployees.count} Department`, dataPrimary:employeeStats.newEmployees.count}}/>
         
       </div>
       <div className="d-flex flex-column flex-md-row gap-2 justify-content-between">
