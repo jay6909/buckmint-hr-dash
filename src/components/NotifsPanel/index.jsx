@@ -33,9 +33,9 @@ function index({notifications}) {
         >
           <img src={ProfilePic}></img>
         </div>
-        <div class="dropdown">
+        <div className="dropdown">
           <button
-            class="btn  dropdown-toggle d-flex flex-row gap-1 justify-content-center align-content-center align-items-center"
+            className="btn  dropdown-toggle d-flex flex-row gap-1 justify-content-center align-content-center align-items-center"
             type="button"
             id="dropdownMenuButton"
             data-toggle="dropdown"
@@ -45,14 +45,14 @@ function index({notifications}) {
             <div className="d-none d-md-block">Admirra John</div>
             <i style={{overflow:'hidden', marginTop:'10px'}} ><ArrowDropDownIcon width={20} height={20}/></i>
           </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">
+          <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a className="dropdown-item" href="#">
               Settings
             </a>
-            <a class="dropdown-item" href="#">
+            <a className="dropdown-item" href="#">
               Change Password
             </a>
-            <a class="dropdown-item" href="#">
+            <a className="dropdown-item" href="#">
               Logout
             </a>
           </div>

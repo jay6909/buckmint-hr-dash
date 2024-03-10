@@ -4,8 +4,6 @@ import data from "../../data";
 import AnnouncementScheduleCard from "./AnnouncementScheduleCard";
 function Accouncements() {
   const [announcements, setAnnouncements] = useState(data.announcements)
-
-  console.log(announcements)
   return (
     <div className="" style={{padding:"20px",}}>
       <div  style={{border:'2px solid #E0E0E0', padding:'20px',  borderRadius:'15px'}}>

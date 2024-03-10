@@ -13,6 +13,7 @@ function AnnouncementScheduleCard({
         border: "1px solid #E0E0E0",
         borderRadius: "7px",
         padding: "5px",
+        background:'rgb(224 224 224/50%)'
       }}
     >
       <div className="d-flex flex-column gap-1 text-start">
@@ -28,17 +29,17 @@ function AnnouncementScheduleCard({
             className="d-flex align-items-center justify-content-center"
             style={{ cursor: "pointer" }}
           >
-            <PinIcon width={30} height={30} />
+            <i><PinIcon width={30} height={30} /></i>
           </div>
         ) : (
           <></>
         )}
         {ShowThreeDotsMore ? (
           <div
-            className="d-flex align-items-center align-content-center justify-content-center"
-            style={{ cursor: "pointer" }}
+            className="d-flex justify-content-center align-items-center"
+            style={{ cursor: "pointer", width:'30px', height:'30px' }}
           >
-            <ThreeDotsMore width={30} height={30} />
+            <i><ThreeDotsMore width={30} height={30} /></i>
           </div>
         ) : (
           <></>
